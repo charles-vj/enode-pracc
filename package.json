@@ -1,0 +1,23 @@
+{
+  "name": "enode-pracc",
+  "version": "1.0.0",
+  "description": "practicing node",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charles-vj/enode-pracc.git"
+  },
+  "author": "Charles V.J.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charles-vj/enode-pracc/issues"
+  },
+  "homepage": "https://github.com/charles-vj/enode-pracc#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
