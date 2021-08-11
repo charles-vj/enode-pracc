@@ -1,13 +1,19 @@
 const http= require('http');
+const bodyparser= require('body-parser');
 
 const express = require('express');
 
 const app = express();
 
-app.use((req,res,next) => {
-    console.log('In the middleware');
+const adminRoutes = require('./routes/admin');
+const shopRoutes = require('./routes/shop');
+
+app.use(bodyparser.urlencoded({extended : false}));
+
+app.use(adminRoutes);
+app.use(shopRoutes);
+app.use('/', (req,res,next) => {
+    res.send('<h1>ye konsa page hai</h1>');
 });
 
-const server = http.createServer(app);
-
-server.listen(3000);
+app.listen(3000)
